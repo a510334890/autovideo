@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Arise Admin Panel" />
+		<meta name="keywords" content="Admin, Dashboard, Bootstrap3, Sass, transform, CSS3, HTML5, Web design, UI Design, Responsive Dashboard, Responsive Admin, Admin Theme, Best Admin UI, Bootstrap Theme, Themeforest, Bootstrap" />
+		<meta name="author" content="Ramji" />
+		<link rel="shortcut icon" href="img/fav.png">
+		<title>Arise Admin Panel - shared on themelock.com</title>
+		
+		<!-- Error CSS -->
+		<link th:href="@{/css/login.css}" rel="stylesheet" media="screen">
+
+		<!-- Animate CSS -->
+		<link th:href="@{/css/animate.css}" rel="stylesheet" media="screen">
+
+		<!-- Ion Icons -->
+		<link th:href="@{/fonts/icomoon/icomoon.css}" rel="stylesheet" />
+	</head>
+	<body>
+		<form action="/user/getindex" id="wrapper">
+			<div id="box" class="animated bounceIn">
+				<div id="top_header">
+					<h5>
+						健身房管理系统
+					</h5>
+				</div>
+				<div id="inputs">
+					<div class="form-block">
+						<input type="text" placeholder="邮箱">
+						<i class="icon-user-check"></i>
+					</div>
+					<div class="form-block">
+						<input type="password" placeholder="密码">
+						<i class="icon-spell-check"></i>
+					</div>
+					<input type="submit" value="登录">
+				</div>
+				<div id="bottom" class="clearfix">
+					<div class="pull-right">
+						<label class="switch pull-right">
+							<input type="checkbox" class="switch-input" checked>
+							<span class="switch-label" data-on="Yes" data-off="No"></span>
+							<span class="switch-handle"></span>
+						</label>
+					</div>
+					<div class="pull-right">
+						<span class="cb-label">记住我</span>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>
