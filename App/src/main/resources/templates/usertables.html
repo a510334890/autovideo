@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="commamd/head :: head"></head>
+<body>
+
+<div th:replace="commamd/frame :: frame"></div>
+
+<!-- Dashboard Wrapper Start -->
+<div class="dashboard-wrapper dashboard-wrapper-lg">
+    <!-- Row starts -->
+    <div class="row gutter">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="panel panel-red">
+                <div class="panel-heading">
+                    <h4>用户信息</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table no-margin">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>用户名</th>
+                                <th>电话</th>
+                                <th>地址</th>
+                                <th>email</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="c:${userlist}">
+                                <td th:text="${c.id}"></td>
+                                <td th:text="${c.username}"><br><br><small class="text-dark-blue"><br></small></td>
+                                <td th:text="${c.phone}"><br><br><small class="text-dark-blue"><br></small></td>
+                                <td th:text="${c.address}"><br><br><small class="text-dark-blue"><br></small></td>
+                                <td th:text="${c.email}"><br><br><small class="text-dark-blue"><br></small></td>
+                                <td><button>删除</button></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Row ends -->
+
+</div>
+
+
+<!-- Footer Start -->
+<footer th:replace="commamd/footer :: footer"></footer>
+</body>
+</html>
