@@ -20,4 +20,9 @@ public class UserController {
         List<User> getuser = userService.getuser();
         return getuser;
     }
+    @RequestMapping("/getuserbyid")
+    public User getUserById(Integer id){
+        User userById = userService.getUserById(id);
+        return userById;
+    }
 }

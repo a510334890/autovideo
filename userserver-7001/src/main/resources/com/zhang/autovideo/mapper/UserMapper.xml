@@ -5,4 +5,7 @@
 <select id="getuser" resultType="com.zhang.autovideo.pojo.User">
     select * from user;
 </select>
+    <select id="getUserById" resultType="com.zhang.autovideo.pojo.User">
+        select * from user where id = #{id}
+    </select>
 </mapper>
