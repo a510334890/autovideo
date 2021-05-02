@@ -2,11 +2,11 @@ package com.zhang.app.controller;
 
 
 import com.zhang.app.service.UserFeignapi;
+import com.zhang.autovideo.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 
 import javax.servlet.http.HttpSession;
@@ -34,4 +34,11 @@ public class UserController {
         model.addAttribute("userlist",getuser);
         return "usertables";
     }
+    @RequestMapping("/getuserbyid")
+    public String getUserById(Integer id,Model model){
+        User userById = feignapi.getUserById(id);
+        model.addAttribute("user",userById);
+        return "usertables";
+    }
+
 }
