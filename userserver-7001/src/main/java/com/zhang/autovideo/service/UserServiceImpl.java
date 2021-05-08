@@ -28,4 +28,15 @@ public class UserServiceImpl implements IUserService{
         User userById = userMapper.getUserById(id);
         return userById;
     }
+
+    @Override
+    public boolean delUserById(Integer id) {
+        Integer b = userMapper.delUserById(id);
+        if(b>0){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }

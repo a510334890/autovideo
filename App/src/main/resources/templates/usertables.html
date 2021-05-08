@@ -34,7 +34,7 @@
                                 <td th:text="${c.phone}"><br><br><small class="text-dark-blue"><br></small></td>
                                 <td th:text="${c.address}"><br><br><small class="text-dark-blue"><br></small></td>
                                 <td th:text="${c.email}"><br><br><small class="text-dark-blue"><br></small></td>
-                                <td><button>删除</button></td>
+                                <td><button onclick="deluser(this.value)" th:value="${c.id}">删除</button></td>
                             </tr>
                             </tbody>
                         </table>
@@ -51,4 +51,20 @@
 <!-- Footer Start -->
 <footer th:replace="commamd/footer :: footer"></footer>
 </body>
+<script>
+    function deluser(cid) {
+        var cid1 = cid;
+        $.ajax({
+            type : "POST",
+            url : "/user/delUserById",
+            contentType:"application/json",
+            dataType : "json",
+            data : cid1,
+            async : false,
+            success : function(msg) {
+                alert("删除成功");
+            }
+        });
+    }
+</script>
 </html>

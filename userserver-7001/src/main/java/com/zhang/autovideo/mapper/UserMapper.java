@@ -11,4 +11,5 @@ import java.util.List;
 public interface UserMapper {
     List<User> getuser();
     User getUserById(Integer id);
+    Integer delUserById(Integer id);
 }

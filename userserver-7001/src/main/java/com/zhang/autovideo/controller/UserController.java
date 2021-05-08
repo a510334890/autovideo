@@ -25,4 +25,14 @@ public class UserController {
         User userById = userService.getUserById(id);
         return userById;
     }
+    @RequestMapping("/delUserById")
+    public String delUserById(Integer id){
+        boolean b = userService.delUserById(id);
+        if(b){
+            return "更新成功";
+        }
+        else{
+            return "更新失败";
+        }
+    }
 }
